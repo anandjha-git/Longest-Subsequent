@@ -1,0 +1,84 @@
+
+
+.Form {
+  padding: 30px;
+}
+span {
+  color: red;
+}
+input.ng-valid {
+  border-left: 5px solid green;
+}
+input.ng-invalid {
+  border-left: 5px solid red;
+}
+.enroll {
+  opacity: 100000%;
+  width: 25%;
+
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin: auto;
+
+  box-shadow: #414a74 20px 20px 10px;
+}
+
+input[type="text"] {
+  width: 180px;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  width: 180px;
+  background-color: #15a2f3;
+  color: white;
+  padding: 8px 8px;
+  margin: 8px 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+span {
+  color: red;
+}
+
+.divide {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input.ng-valid {
+  border-left: 5px solid green;
+}
+input.ng-invalid {
+  border-left: 5px solid red;
+}
+h6 {
+  color: red;
+}
+#sect1 {
+   background-size: 100px;
+  background-size: cover;
+  width: 800px;
+  height: 650px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  opacity: 1;
+  right: 40px;
+  padding-right: 20px;
+}

@@ -1,0 +1,229 @@
+#sect1 {
+    background-size: 100%;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  opacity: 1;
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.main-header-1 {
+  background-color: #008080;
+  /* background-color: #f1ddc0; */
+}
+.logo {
+  font-weight: bold;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  position: relative;
+  left: 8%;
+  line-height: 38px;
+}
+.main-header-1 > div {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
+.navigation {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 12px;
+  z-index: 1;
+  display: inline-block;
+  text-align: right;
+  width: fit-content;
+  margin-left: 60%;
+}
+.main-items {
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 38px;
+}
+.navigation > a {
+  display: inline-block;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+}
+.content {
+  width: 100%;
+  height: 540px;
+  background-size: cover;
+}
+.head1 {
+  position: relative;
+  top: 45%;
+  margin: auto;
+  color: white;
+  text-align: center;
+  font-size: 30pt;
+  font-weight: 800;
+}
+.amenities {
+  height: 300px;
+  position: relative;
+  top: 5%;
+  background-color: beige;
+}
+.ul-list1 {
+  text-align: center;
+  list-style: none;
+  width: auto;
+  background-color: beige;
+  background-position: center;
+}
+.button {
+  background-color:#089696;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttonon {
+  background-color: rgb(177, 12, 26);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 20%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  border: 2px solid rgb(66, 241, 160);
+  border-radius: 12px;
+  
+}
+/* Table Styles */
+
+.table-wrapper{
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 18px;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table {
+      display: block;
+      width: 100%;
+  }
+  .table-wrapper:before{
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 18px;
+      color: white;
+      padding: 0 0 10px;
+  }
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+      display: block;
+  }
+  .fl-table thead th:last-child{
+      border-bottom: none;
+  }
+  .fl-table thead {
+      float: left;
+  }
+  .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+  }
+  .fl-table td, .fl-table th {
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 18px;
+      text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+      display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+      background: none;
+  }
+  .fl-table tr:nth-child(even) {
+      background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+      background: #F8F8F8;
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tr td:nth-child(even) {
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tbody td {
+      display: block;
+      text-align: center;
+  }
+}
+#searchTextId{
+  border-radius: 8px;
+  padding-left: 20px;
+}

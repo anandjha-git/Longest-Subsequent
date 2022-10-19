@@ -1,0 +1,49 @@
+<div id="sect1" class="container">
+    <header class="main-header-1">
+        <div>
+            <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="logo">E-Medicare</a>
+        </div>
+        <nav class="navigation">
+            <a routerLink="/userpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items">Back</a>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items">Logout</a>
+        </nav>
+    </header>
+    <router-outlet></router-outlet>
+    <h1 style="text-align: center;color: rgba(0, 0, 0, 0.589);">Your Cart</h1>
+    <div>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+
+                        <th>Medicine</th>
+                        <th>Desccription</th>
+                        <th>Price</th>
+                        <th>Proceed For Payment</th>
+                        <th>Remove From Cart</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cart of carts">
+
+                        <td>{{cart.medicineName}}</td>
+                        <td>{{cart.description}}</td>
+                        <td>{{cart.price}}</td>
+                        <td> <a routerLink="/billing/{{cart.medicineId}}" class="button">Buy Now</a></td>
+                        <!-- <td><a href="http:" target="_blank" rel="noopener noreferrer">Buy Now</a></td> -->
+                        <td> <button (click)="deleteCart(cart.medicineId)" class="buttonon">Remove From Cart</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <button class="dropdown-item" (click)="payment()">Proceed to checkout</button> -->
+
+        </div>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

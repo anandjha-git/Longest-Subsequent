@@ -1,0 +1,42 @@
+<app-header></app-header>
+<!-- <div id="sect1"></div> -->
+<!-- <div class="container"> -->
+<router-outlet></router-outlet>
+
+
+<!-- <div class="admin-main"> -->
+    <!-- //ched code -->
+    <body>
+   <div class="box">
+  
+    <div class="form">
+   
+   <!-- mat ched code -->
+ 
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+            <h2>Signin As Admin</h2>
+    
+             <div class="inputbox">
+                <label for="username"><span>Username </span></label>
+                <input type="UserName" id="username" name="username" 
+                    class="searchTextField" placeholder="Enter Username" ngModel> 
+                    <i></i>
+                </div>
+
+                <div class="inputbox">
+                <label for="password"><span>Password: </span></label>
+                <input type="password" id="password" name="password" 
+                class="searchTextField" placeholder="Enter Password" ngModel>
+                <i></i>
+            </div>
+
+                <input type="submit" value="Login" class="actionBtn">
+           
+        
+    </form> 
+
+</div>
+</div>
+</body>

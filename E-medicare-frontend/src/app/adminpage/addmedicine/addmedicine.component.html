@@ -1,0 +1,64 @@
+<div id="sect1"class="container">
+  <header class="main-header-1">
+      <div>
+          <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="logo">E-Medicare</a>
+          </div>
+          <nav class="navigation">
+              <a routerLink="/adminpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Back</a>
+              <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Log-out</a>
+          </nav>
+  </header>
+
+  <h1  style="text-align: center;color: black;">Add Medicine And Medicine Details</h1><br><br><br><br>
+<div class="container">
+<form Class="Add_Med" #s="ngForm" (ngSubmit)="onSubmit(s)">
+  <div class="form-group">
+      <label for="medicineName">&emsp;Medicine Name&emsp;</label>
+      <input type="text" style="margin-left: 49.5px ; width: 150px; " required class="form-control"  name="medicineName" ngModel #medicineName="ngModel" />
+      <span 
+      *ngIf="medicineName.invalid && medicineName.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+<div class="form-group">
+        <label for="manufactureDate">&emsp;Manufacture Date&emsp;</label>
+        <input type="date" style="margin-left: 20px ; width: 153px;" required class="form-control" name="manufactureDate" ngModel #manufactureDate="ngModel"/>
+        <span 
+        *ngIf="manufactureDate.invalid && manufactureDate.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="type">&emsp;Type&emsp;</label>
+        <input type="text" style="margin-left: 136px ; width: 150px;" required class="form-control" name="type" ngModel #type="ngModel" />
+        <span 
+        *ngIf="type.invalid && type.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="price">&emsp;Price&emsp;</label>
+        <input type="text" style="margin-left: 126px ; width: 150px;" required class="form-control" name="price" ngModel #price="ngModel"/>
+        <span 
+        *ngIf="price.invalid && price.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="description">&emsp;Description&emsp;</label>
+        <input type="text" style="margin-left: 68px ; width: 150px;" required class="form-control" name="description" ngModel #description="ngModel"/>
+        <span 
+        *ngIf="description.invalid && description.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="expireDate">&emsp;Expire Date&emsp;</label>
+        <input type="date" style="margin-left: 68px ; width: 153px;" required class="form-control" name="expdate" ngModel #expireDate="ngModel"/>
+        <span 
+        *ngIf="expireDate.invalid && expireDate.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="status">&emsp;Status&emsp;</label>
+        <input type="text" style="margin-left: 115px ; width: 150px;" required class="form-control" name="status" ngModel #status="ngModel"/>
+        <span 
+        *ngIf="status.invalid && status.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+       <label for="seller">&emsp;Seller&emsp;</label>
+       <input type="text" style="margin-left: 115px ; width: 150px;" required class="form-control" name="seller" ngModel #seller="ngModel" />
+       <span 
+       *ngIf="seller.invalid && seller.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+       <input [disabled]="s.invalid" type="submit" class="button" value="Submit" />
+  </form></div></div>

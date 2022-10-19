@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div id="sect1">
+  <div class="form">
+    <div class="container">
+
+      <form #s="ngForm" style="padding: 100px;" (ngSubmit)="onSubmit(s)">
+        <div class="form-group">
+          <h2 style="color: rgb(19, 18, 18);">Contact Us</h2>
+          <label style="color: rgb(19, 18, 18);" for="name">Name</label>
+          <input type="text" style="margin-left: 49.5px ; width: 250px;" required class="form-control" name="name"
+            ngModel #name="ngModel" />
+          <span *ngIf="name.invalid && name.touched" class="error">Cannot submit form if required fields are null
+          </span>
+          <!--<span appMarkAsterisk [formGroup]="formGroup" [controlName]="'name'"></span>-->
+        </div>
+        <div class="form-group">
+          <label style="color: rgb(17, 17, 17);" for="emailId">Mail-Id</label>
+          <input type="text" style="margin-left: 40px ; width: 250px;" required class="form-control" name="emailId"
+            ngModel #emailId="ngModel" />
+          <span *ngIf="emailId.invalid && emailId.touched" class="error">Cannot submit form if required fields are
+            null</span>
+        </div>
+        <div class="form-group">
+          <label style="color: rgb(10, 10, 10);" for="contactNo">Contact No</label>
+          <input type="text" style="margin-left: 17px ; width: 250px;" required class="form-control" name="contactNo"
+            ngModel #contactNo="ngModel" />
+          <span *ngIf="contactNo.invalid && contactNo.touched" class="error">Cannot submit form if required fields are
+            null
+          </span>
+        </div>
+        <div class="form-group">
+          <label style="color: rgb(8, 8, 8);" for="description">Description</label>
+          <input type="text" style="margin-left: 17px ; width: 250px;" required class="form-control" name="description"
+            ngModel #description="ngModel" />
+          <span *ngIf="description.invalid && description.touched" class="error">Cannot submit form if required fields
+            are null
+          </span>
+        </div>
+        <input [disabled]="s.invalid" type="submit" style="margin-left: 90px; margin-top: 50px;" value="Submit" />
+      </form>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

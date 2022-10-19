@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div >
+  <div id="sect1"class="container"></div>
+	<div class="enroll" style="margin-top: 5px">
+
+<h3 style="text-align:center"> User Registration</h3>
+  <form #s="ngForm" (ngSubmit)="onSubmit(s)">
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" required class="form-control" name="first_name" placeholder="Ashish" ngModel 
+        #first_name="ngModel" />
+      <span 
+      *ngIf="first_name.invalid && first_name.touched" class="error">Cannot Submitted, Every Field is Required</span>
+      </div> 
+      <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" placeholder="Mishra" name="last_name" ngModel />
+        </div>
+        <div class="form-group">
+          <label for="mobile_no">Mobile No</label>
+          <input type="number" required class="form-control" name="mobile_no" placeholder="9123456789" ngModel #mobile_no="ngModel" />
+          <span 
+          *ngIf="mobile_no.invalid && mobile_no.touched" class="error">Cannot Submitted, Every Field is Required</span>
+        </div> 
+        <div class="form-group">
+          <label for="age">Date Of Birth</label>
+          <input type="text" required class="form-control" name="age" placeholder="01-05-2009" ngModel #age="ngModel"/>
+          <span 
+          *ngIf="age.invalid && age.touched" class="error">Cannot Submitted, Every Field is Required</span>
+        </div>
+        <div class="form-group">
+          <label for="username">Email Id</label>
+          <input type="email" required class="form-control" name="username" placeholder="ashishmishra@gmail.com" ngModel #username="ngModel" />
+          <span 
+          *ngIf="username.invalid && username.touched" class="error">Cannot Submitted, Every Field is Required</span>
+        </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" required class="form-control" name="password" placeholder="Asgish@Mi&122$" ngModel #password="ngModel" />
+        <span 
+          *ngIf="password.invalid && password.touched" class="error">Cannot Submitted, Every Field is Required</span>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" required class="form-control" name="gender" placeholder="Male" ngModel #gender="ngModel"/>
+        <span 
+        *ngIf="gender.invalid && gender.touched" class="error">Cannot Submitted, Every Field is Required</span>
+      </div>
+      <input [disabled]="s.invalid" type="submit" value="Submit" />
+     
+    </form>
+    </div>
+    </div>

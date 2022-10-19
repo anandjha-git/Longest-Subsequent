@@ -1,0 +1,62 @@
+<div id="sect1" class="container">
+    <header class="main-header-1">
+        <div>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="logo">Welcome
+                User
+            </a>
+        </div>
+        <nav class="navigation">
+            <a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items"> Update Profile and Change Password</a>
+
+            <a routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items"> Your Cart</a>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items">Log-out</a>
+
+        </nav>
+    </header>
+    <router-outlet></router-outlet>
+    <h1 style="text-align: center;color: black;">Available Machine On E-Medicare</h1>
+    <div>
+
+        <input  type="text" id="searchTextId" [(ngModel)]="searchText" name="searchText" placeholder="Search By Name">
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+
+                        <th>Medicine Name</th>
+                        <th>Mfg Date</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Exp Date</th>
+                        <th>Status</th>
+                        <th>Proceed For Payment</th>
+                        <th>Add To Cart</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Medicines of medicines | searchByName: searchText">
+
+                        <td>{{Medicines.medicineName}}</td>
+                        <td>{{Medicines.manufactureDate}}</td>
+                        <td>{{Medicines.type}}</td>
+                        <td>{{Medicines.price}}</td>
+                        <td>{{Medicines.description}}</td>
+                        <td>{{Medicines.expdate}}</td>
+                        <td>{{Medicines.status}}</td>
+                        <td> <a routerLink="/billing/{{Medicines.medicineId}}" class="button"> Buy Now</a></td>
+                        <!-- <td><a href="">Buy Now</a></td> -->
+                        <!--<td> <button (click)="addCart(cart.medicineId)" class="btn btn-danger">Delete</button></td> -->
+                        <td> <button (click)="addCart(Medicines.medicineId)" class="buttonon"> Add To Your Cart
+                            </button></td>
+                        <!-- <td><button class="btn btn-danger" (click)="payment()">Book Medicine</button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+            <!--<button class="dropdown-item" (click)="payment()">Proceed to checkout</button> -->
+        </div>
+    </div>
+</div>

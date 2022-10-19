@@ -1,0 +1,44 @@
+<div id="sect1" class="container">
+    <header class="main-header-1">
+        <div>
+            <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="logo">E-Medicare</a>
+        </div>
+        <nav class="navigation">
+            <a routerLink="/userpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items">Go Back</a>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="main-items">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form">
+            <form #userData="ngForm" (ngSubmit)="onSubmit()">
+                <h1><span style="color: black;font-weight:600;text-align:center;justify-content:center">Update Your
+                        Profile and Change Password</span></h1>
+                <br>
+
+                <label for="first_name">First Name</label><br>
+                <input type="text" name="first_name" [(ngModel)]="user.first_name" /><br>
+                <label for="last_name">Last Name</label><br>
+                <input type="text" name="last_name" [(ngModel)]="user.last_name" /><br>
+                <label for="mobile_no">Mobile Number</label><br>
+                <input type="number" name="mobile_no" [(ngModel)]="user.mobile_no" /><br>
+                <label for="age">Age</label><br>
+                <input type="text" name="age" [(ngModel)]="user.age" /><br>
+                <label for="gender">Gender</label><br>
+                <input type="text" name="gender" [(ngModel)]="user.gender"><br><br>
+                <h1><span style="color: black;font-weight:600;text-align:center;justify-content:center">Change Your
+                        Password</span></h1>
+                <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" [(ngModel)]="user.password" /><br><br>
+                <button type="submit " class="btn">
+                    Submit</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
